@@ -33,3 +33,46 @@
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 7%);
 }
+
+/*======== Resetting default styles ========*/
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--normal-font-size);
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*======== Base ========*/
+.main {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cards {
+  width: calc(100% - 2rem);
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 100%;
+  row-gap: 31px;
+}
+
+.card {
+  position: relative;
+  padding: 16px;
+}
