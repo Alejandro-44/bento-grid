@@ -15,3 +15,21 @@
   font-style: italic;
   font-display: swap;
 }
+
+:root {
+  /*======== Setting root's font size ========*/
+  font-size: 18px;
+  /*======== Font and typography ========*/
+  --font-family: "DMSansVariable", sans-serif;
+  --ultralarge-font-size: 2.5rem;
+  --large-font-size: 1.7rem;
+  --medium-font-size: 1.4rem;
+  --normal-font-size: 1rem;
+  /*======== Colors ========*/
+  --purple-light: hsl(254, 88%, 90%);
+  --purple: hsl(256, 67%, 59%);
+  --yellow-light: hsl(31, 66%, 93%);
+  --yellow: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+}
