@@ -100,3 +100,43 @@ img {
 .card__title--white {
   color: var(--white);
 }
+
+/*======== Specific Card Styles ========*/
+.fast-ai {
+  background-color: var(--dark-purple);
+  padding: 32px 40px;
+  text-align: center;
+}
+
+.fast-ai .card__details {
+  margin-top: 2rem;
+  color: var(--white);
+}
+
+.manage-accounts {
+  background-color: var(--white);
+}
+
+.consisten-schedule {
+  background-color: var(--dark-yellow);
+}
+
+.schedule-social {
+  background-color: var(--white-purple);
+}
+
+.grow-followers {
+  background-color: var(--dark-purple);
+}
+
+.audience-growth {
+  background-color: var(--white);
+}
+
+.create-schedule {
+  background-color: var(--white-yellow);
+}
+
+.write-ai {
+  background-color: var(--dark-yellow);
+}
