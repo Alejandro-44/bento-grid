@@ -26,10 +26,10 @@
   --medium-font-size: 1.4rem;
   --normal-font-size: 1rem;
   /*======== Colors ========*/
-  --purple-light: hsl(254, 88%, 90%);
-  --purple: hsl(256, 67%, 59%);
-  --yellow-light: hsl(31, 66%, 93%);
-  --yellow: hsl(39, 100%, 71%);
+  --white-purple: hsl(254, 88%, 90%);
+  --dark-purple: hsl(256, 67%, 59%);
+  --white-yellow: hsl(31, 66%, 93%);
+  --dark-yellow: hsl(39, 100%, 71%);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 7%);
 }
@@ -39,6 +39,7 @@ body {
   margin: 0;
   font-family: var(--font-family);
   font-size: var(--normal-font-size);
+  color: var(--black);
 }
 
 h1,
@@ -70,9 +71,32 @@ img {
   display: grid;
   grid-template-columns: 100%;
   row-gap: 31px;
+  margin-top: 2rem;
 }
 
 .card {
   position: relative;
   padding: 16px;
+  border-radius: 10px;
+}
+
+/*======== Util Classes ========*/
+.card__title--italic {
+  font-style: italic;
+}
+
+.card__title--yellow {
+  color: var(--dark-yellow);
+}
+
+.card__title--purple {
+  color: var(--dark-purple);
+}
+
+.card__title--ultralargesize {
+  font-size: var(--ultralarge-font-size);
+}
+
+.card__title--white {
+  color: var(--white);
 }
