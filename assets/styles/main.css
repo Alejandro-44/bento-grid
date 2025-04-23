@@ -73,11 +73,20 @@ img {
 }
 
 .card {
-  position: relative;
+  display: grid;
+  justify-items: var(--card-horizontal-align, start);
+  align-items: var(--card-vertical-align, start);
   padding: 16px;
   border-radius: 10px;
+  background-color: var(--card-background-color, hsl(0, 0%, 100%));
+  color: var(--card-text-color, hsl(0, 0%, 7%));
   box-sizing: border-box;
   overflow: hidden;
+  gap: 16px;
+}
+
+.card__title {
+  font-size: var(--medium-font-size);
 }
 
 /*======== Util Classes ========*/
@@ -102,119 +111,3 @@ img {
 }
 
 /*======== Specific Card Styles ========*/
-.fast-ai {
-  background-color: var(--dark-purple);
-  padding: 32px 40px;
-  text-align: center;
-}
-
-.fast-ai .card__title {
-  font-size: var(--ultralarge-font-size);
-  color: var(--white);
-  margin-bottom: 1rem;
-}
-
-.fast-ai .card__details {
-  margin-top: 1rem;
-  color: var(--white);
-}
-
-.manage-accounts {
-  background-color: var(--white);
-}
-
-.manage-accounts .card__title {
-  margin-top: 1rem;
-  color: var(--black);
-}
-
-.consisten-schedule {
-  background-color: var(--dark-yellow);
-}
-
-.consisten-schedule .card__title {
-  font-size: var(--medium-font-size);
-  margin-right: 1rem;
-  margin-bottom: 2rem;
-}
-
-.consisten-schedule .card__image {
-  width: 70%;
-  margin-bottom: -30px;
-}
-
-.schedule-social {
-  background-color: var(--white-purple);
-}
-
-.schedule-social .card__title {
-  font-size: var(--medium-font-size);
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.schedule-social .card__details {
-  margin-top: 1rem;
-  text-align: center;
-  padding: 1rem;
-}
-
-.grow-followers {
-  background-color: var(--dark-purple);
-  color: var(--white);
-}
-
-.grow-followers .card__title {
-  font-size: var(--large-font-size);
-  margin-bottom: 1rem;
-}
-
-.grow-followers .card__image {
-  width: 80%;
-  margin-left: 2rem;
-}
-
-.audience-growth {
-  background-color: var(--white);
-}
-
-.audience-growth .card__title {
-  margin-top: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.audience-growth .card__image {
-  width: 70%;
-  margin-bottom: 1rem;
-}
-
-.create-schedule {
-  background-color: var(--white-yellow);
-}
-
-.create-schedule .card__title {
-  font-size: var(--large-font-size);
-  margin: 1rem;
-}
-
-.create-schedule .card__image {
-  width: 70%;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-}
-
-.write-ai {
-  background-color: var(--dark-yellow);
-}
-
-.write-ai .card__title {
-  font-size: var(--large-font-size);
-  margin: 1rem;
-}
-
-.write-ai .card__image {
-  width: 70%;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-}
