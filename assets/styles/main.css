@@ -29,10 +29,23 @@
   --black: hsl(0, 0%, 7%);
 }
 
+@media screen and (width > 960px) {
+  :root {
+    /*======== Setting root's font size ========*/
+    font-size: 20px;
+    --font-family: "DM Sans", sans-serif;
+    --ultralarge-font-size: 3rem;
+    --large-font-size: 2rem;
+    --medium-font-size: 1.7rem;
+    --normal-font-size: 1rem;
+  }
+}
+
 /*======== Resetting default styles ========*/
 body {
   margin: 0;
   font-family: var(--font-family);
+  line-height: 0.9;
   font-size: var(--normal-font-size);
   color: var(--black);
 }
@@ -61,8 +74,8 @@ img {
   width: calc(100% - 2rem);
   max-width: 1200px;
   display: grid;
-  grid-template-columns: 100%;
-  gap: 31px;
+  grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight";
+  gap: 32px;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -70,14 +83,14 @@ img {
 .card {
   display: grid;
   justify-items: var(--card-horizontal-align, start);
-  align-items: var(--card-vertical-align, start);
+  align-content: var(--card-vertical-align, start);
   gap: 16px;
   padding: 16px;
   border-radius: 10px;
   background-color: var(--card-background-color, hsl(0, 0%, 100%));
   color: var(--card-text-color, hsl(0, 0%, 7%));
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .card__title {
@@ -107,6 +120,7 @@ img {
 
 /*======== Specific Card Styles ========*/
 .cards > :nth-child(1) {
+  grid-area: one;
   --card-background-color: var(--dark-purple);
   --card-text-color: var(--white);
   --card-horizontal-align: center;
@@ -116,7 +130,6 @@ img {
 .cards > :nth-child(1) .card__title {
   text-align: center;
   font-size: var(--ultralarge-font-size);
-  line-height: 0.9;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -125,6 +138,9 @@ img {
   width: 70%;
 }
 
+.cards > :nth-child(2) {
+  grid-area: two;
+}
 
 .cards > :nth-child(2) .card__title {
   margin-bottom: .5rem;
@@ -138,6 +154,7 @@ img {
 }
 
 .cards > :nth-child(3) {
+  grid-area: three;
   --card-background-color: var(--dark-yellow);
 }
 
@@ -147,13 +164,13 @@ img {
 }
 
 .cards > :nth-child(4) {
+  grid-area: four;
+  --card-horizontal-align: center;
   --card-background-color: var(--white-purple);
 }
 
 .cards > :nth-child(4) .card__title {
-  text-align: center;
   margin-top: 1rem;
-
 }
 
 .cards > :nth-child(4) .card__details {
@@ -163,10 +180,10 @@ img {
   margin-top: .5rem;
   margin-bottom: 1rem;
   font-weight: 500;
-  line-height: .9;
 }
 
 .cards > :nth-child(5) {
+  grid-area: five;
   --card-background-color: var(--dark-purple);
   --card-text-color: var(--white);
   --card-horizontal-align: center;
@@ -175,7 +192,6 @@ img {
 
 .cards > :nth-child(5) .card__title {
   text-align: center;
-  line-height: .9;
   margin-top: 1rem;
   margin-bottom: .5rem;
   width: 70%;
@@ -184,6 +200,10 @@ img {
 .cards > :nth-child(5) .card__image {
   order: -1;
   margin-top: .5rem;
+}
+
+.cards > :nth-child(6) {
+  grid-area: six;
 }
 
 .cards > :nth-child(6) .card__title {
@@ -196,12 +216,12 @@ img {
 }
 
 .cards > :nth-child(7) {
+  grid-area: seven;
   --card-background-color: var(--white-yellow);
   padding: 1rem 2rem;
 }
 
 .cards > :nth-child(7) .card__title {
-  line-height: .9;
   margin-top: 1rem;
 }
 
@@ -211,12 +231,12 @@ img {
 }
 
 .cards > :nth-child(8) {
+  grid-area: eight;
   --card-background-color: var(--dark-yellow);
   padding: 1rem 2rem;
 }
 
 .cards > :nth-child(8) .card__title {
-  line-height: .9;
   margin-top: 1rem;
   width: 90%;
 }
@@ -224,4 +244,93 @@ img {
 .cards > :nth-child(8) .card__image {
   width: 70%;
   margin-bottom: 1rem;
+}
+
+
+@media screen and (width > 960px) {
+  .cards {
+    grid-template-areas:
+      "seven one one four"
+      "seven two three four"
+      "eight two three four"
+      "eight six five five"
+    ;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .cards > :nth-child(1) .card__image {
+    width: 40%;
+  }
+
+  .cards > :nth-child(2) .card__image {
+    width: 145%;
+  }
+
+  .cards > :nth-child(3) .card__image {
+    width: 100%;
+    margin-bottom: -70px;
+  }
+
+  .cards > :nth-child(4) {
+    grid-template-rows: auto 1fr auto;
+    --card-horizontal-align: start;
+  }
+
+  .cards > :nth-child(4) .card__image {
+    width: 175%;
+  }
+  .cards > :nth-child(4) .card__details {
+    text-align: left;
+  }
+
+  .cards > :nth-child(5) {
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+  }
+
+  .cards > :nth-child(5) .card__title {
+    text-align: left;
+    width: initial;
+    align-self: center;
+  }
+
+  .cards > :nth-child(5) .card__image {
+    order: -1;
+    margin-top: 0;
+  }
+
+  .cards > :nth-child(6) .card__title {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .cards > :nth-child(6) .card__image {
+    width: 80%;
+    margin-bottom: 0;
+  }
+
+  .cards > :nth-child(7) {
+    --card-vertical-align: center;
+  }
+
+  .cards > :nth-child(7) .card__image {
+    width: 100%;
+  }
+
+  .cards > :nth-child(8) {
+    padding: 1.2rem;
+  }
+
+  .cards > :nth-child(8) .card__title {
+    margin: 0;
+  }
+
+  .cards > :nth-child(8) .card__image {
+    width: 107%;
+    margin-bottom: 0;
+    align-self: self-end;
+  }
 }
