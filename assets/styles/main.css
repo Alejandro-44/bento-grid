@@ -1,26 +1,21 @@
 @font-face {
-  font-family: "DMSansVariable";
-  src: url("../fonts/static/DMSans-VariableFont_opsz,wght.ttf")
-    format("truetype-variations");
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
+  font-family: "DM Sans";
+  font-weight: 400 500;
+  src: url("../fonts/DMSans-VariableFont_opsz\,wght.ttf");
 }
 
 @font-face {
-  font-family: "DMSansVariable";
-  src: url("../fonts/static/DMSans-Italic-VariableFont_opsz,wght.ttf")
-    format("truetype-variations");
-  font-weight: 100 900;
+  font-family: "DM Sans";
   font-style: italic;
-  font-display: swap;
+  font-weight: 400 500;
+  src: url("../fonts/DMSans-Italic-VariableFont_opsz\,wght.ttf");
 }
 
 :root {
   /*======== Setting root's font size ========*/
   font-size: 18px;
   /*======== Font and typography ========*/
-  --font-family: "DMSansVariable", sans-serif;
+  --font-family: "DM Sans", sans-serif;
   --ultralarge-font-size: 2.5rem;
   --large-font-size: 1.7rem;
   --medium-font-size: 1.4rem;
@@ -76,13 +71,13 @@ img {
   display: grid;
   justify-items: var(--card-horizontal-align, start);
   align-items: var(--card-vertical-align, start);
+  gap: 16px;
   padding: 16px;
   border-radius: 10px;
   background-color: var(--card-background-color, hsl(0, 0%, 100%));
   color: var(--card-text-color, hsl(0, 0%, 7%));
   box-sizing: border-box;
   overflow: hidden;
-  gap: 16px;
 }
 
 .card__title {
