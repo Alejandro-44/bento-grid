@@ -106,3 +106,122 @@ img {
 }
 
 /*======== Specific Card Styles ========*/
+.cards > :nth-child(1) {
+  --card-background-color: var(--dark-purple);
+  --card-text-color: var(--white);
+  --card-horizontal-align: center;
+  padding: 2rem 2.5rem;
+}
+
+.cards > :nth-child(1) .card__title {
+  text-align: center;
+  font-size: var(--ultralarge-font-size);
+  line-height: 0.9;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cards > :nth-child(1) .card__image {
+  width: 70%;
+}
+
+
+.cards > :nth-child(2) .card__title {
+  margin-bottom: .5rem;
+}
+
+.cards > :nth-child(2) .card__image {
+  order: -1;
+  filter: drop-shadow(0 0 1rem hsl(0, 0%, 0% / .25));
+  border-radius: 100vw;
+  margin-top: .5rem;
+}
+
+.cards > :nth-child(3) {
+  --card-background-color: var(--dark-yellow);
+}
+
+.cards > :nth-child(3) .card__image {
+  width: 70%;
+  margin-bottom: -35px;
+}
+
+.cards > :nth-child(4) {
+  --card-background-color: var(--white-purple);
+}
+
+.cards > :nth-child(4) .card__title {
+  text-align: center;
+  margin-top: 1rem;
+
+}
+
+.cards > :nth-child(4) .card__details {
+  width: 90%;
+  justify-self: center;
+  text-align: center;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  line-height: .9;
+}
+
+.cards > :nth-child(5) {
+  --card-background-color: var(--dark-purple);
+  --card-text-color: var(--white);
+  --card-horizontal-align: center;
+  padding: 1rem 2rem;
+}
+
+.cards > :nth-child(5) .card__title {
+  text-align: center;
+  line-height: .9;
+  margin-top: 1rem;
+  margin-bottom: .5rem;
+  width: 70%;
+}
+
+.cards > :nth-child(5) .card__image {
+  order: -1;
+  margin-top: .5rem;
+}
+
+.cards > :nth-child(6) .card__title {
+  font-size: var(--normal-font-size);
+}
+
+.cards > :nth-child(6) .card__image {
+  width: 60%;
+  margin-bottom: 1rem;
+}
+
+.cards > :nth-child(7) {
+  --card-background-color: var(--white-yellow);
+  padding: 1rem 2rem;
+}
+
+.cards > :nth-child(7) .card__title {
+  line-height: .9;
+  margin-top: 1rem;
+}
+
+.cards > :nth-child(7) .card__image {
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+.cards > :nth-child(8) {
+  --card-background-color: var(--dark-yellow);
+  padding: 1rem 2rem;
+}
+
+.cards > :nth-child(8) .card__title {
+  line-height: .9;
+  margin-top: 1rem;
+  width: 90%;
+}
+
+.cards > :nth-child(8) .card__image {
+  width: 70%;
+  margin-bottom: 1rem;
+}
